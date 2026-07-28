@@ -16,6 +16,7 @@ This guide walks you through preparing the jumphost, installing the tooling, con
 - [Step 5 — Add the trigger script](#step-5--add-the-trigger-script)
 - [Step 6 — Run the automation](#step-6--run-the-automation)
 - [Step 7 — Open the generated URL](#step-7--open-the-generated-url)
+- [Step 8 — Go to the Cloud (auto-login to AWS)](#step-8--go-to-the-cloud-auto-login-to-aws)
 - [Explore & Monitor](#explore--monitor)
 - [Troubleshooting](#troubleshooting)
 
@@ -150,6 +151,22 @@ If the shortcut is **not** there:
 
 ---
 
+## Step 8 — Go to the Cloud (auto-login to AWS)
+
+Opening the URL brings you to the final screen: a **Cloud Accounts – AWS** card showing the details of the cloud account provisioned for you (Account ID, User, Access Key, and Access Secret).
+
+From there, click **Go to Cloud**. This takes you straight into AWS — **no credentials needed**, it performs an auto-login for you.
+
+![Final screen — Cloud Accounts card with Go to Cloud button](assets/final-screen.png)
+
+> 🔒 **Security note:** the credential values in this screenshot have been **redacted** on purpose. The real card shows a live **Access Key** and **Access Secret** — never commit an unredacted version to Git, share it, or paste it anywhere public.
+
+Once you're in, you'll land in the AWS console with your provisioned resources — for example, the running EC2 instance from the VPC + EC2 recipe:
+
+![AWS EC2 console showing the running instance](assets/aws-ec2-console.png)
+
+---
+
 ## Explore & Monitor
 
 - **Explore the recipe** and its contents:
@@ -168,3 +185,4 @@ If the shortcut is **not** there:
 | `python` / `pip` not recognized | Python not on PATH | Reinstall with **Add to PATH**, or use `C:\Python312\python.exe` explicitly |
 | `idac: command not found` | `idac-sdk` not installed | Re-run [Step 3](#step-3--install-the-required-python-libraries) |
 | No URL shortcut in Chrome | Shortcut not created | Open `C:\dcloud\url` and paste the URL manually ([Step 7](#step-7--open-the-generated-url)) |
+| Clicking **Go to Cloud** doesn't log in | Session/recipe not fully provisioned | Check the [board](https://board.cat-dcloud.com/) for status, then reopen the URL ([Step 8](#step-8--go-to-the-cloud-auto-login-to-aws)) |
