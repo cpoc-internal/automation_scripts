@@ -89,13 +89,7 @@ python -m pip install requests lxml bs4 idac-sdk
 
 Configure the iDAC package and CLI for your dCloud session.
 
-For an interactive setup, run:
-
-```powershell
-idac config
-```
-
-Or configure it non-interactively in a single command:
+configure it non-interactively in a single command:
 
 ```powershell
 idac config --controller-url idac.cat-dcloud.com --controller-proto https --api-version 2.0 --auth-type DCLOUD_SESSION --vpn none
