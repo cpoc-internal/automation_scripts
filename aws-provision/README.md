@@ -5,6 +5,8 @@ Automate the provisioning of AWS resources (VPC + EC2) from a Windows jumphost i
 This guide walks you through preparing the jumphost, installing the tooling, configuring the iDAC CLI, and running the automation that triggers the API call to iDAC.
 
 ---
+Note !!!
+   This automation just works on RTP, SJC, LON and SNG, Don't try to run this on SYD, because you will get an error
 
 ## Table of Contents
 
@@ -42,11 +44,7 @@ Before starting your dCloud session, enable **Guest Automation** on the Windows 
 In the dCloud VM editor, open **Edit Virtual Machine → Guest Automation** and:
 
 1. Check **Enable Startup Automation**.
-2. Set **Command to Execute** to:
-   ```text
-   C:\Python312\python.exe  C:\scripts\session_status.py
-   ```
-3. Set **Delay (sec)** to `40`.
+
 
 ![Enable Guest Automation](assets/guest-automation.png)
 
