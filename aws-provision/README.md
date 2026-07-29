@@ -5,7 +5,7 @@ Automate the provisioning of AWS resources (VPC + EC2) from a Windows jumphost i
 This guide walks you through preparing the jumphost, installing the tooling, configuring the iDAC CLI, and running the automation that triggers the API call to iDAC.
 
 ---
-Note!!!
+[!NOTE]
    This automation just works on RTP, SJC, LON and SNG, Don't try to run this on SYD, because you will get an error
 
 ## Table of Contents
